@@ -1,0 +1,613 @@
+<KERNEL_LIST>
+	<PROGRAM_GLOBAL_MEM_SIZE value="0" />
+	<ENABLE_HYPER_OPTIMIZATIONS value="1" />
+	<USE_SYNC_RESET value="1" />
+	<TOP_LEVEL_RESET_EXTENDER value="0" />
+	<ENABLE_STALL_LATENCY value="1" />
+	<ENABLE_ECC value="0" />
+	<GLOBAL_WRITE_LSU_IC_DATA_LATENESS value="0" />
+	<GLOBAL_READ_LSU_IC_DATA_LATENESS value="0" />
+	<GLOBAL_LSU_IC_WIDE_DATA_SLICING value="0" />
+	<ALLOW_HIGH_SPEED_FIFO_USAGE value="0" />
+	<KERNEL_BUNDLE name="_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder" kname="k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder" compute_units="1">
+	<KERNEL name="_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder" kname="k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder" filename="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0000der_function_wrapper.sv" entity_name="k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0000der_function_wrapper" version="1" cosim_name="" enable_global_profiling="1" workgroup_invariant="1" workitem_invariant="0" has_global_atomics="0" num_vector_lanes="1" num_profiling_signals="0">
+		<RESOURCE_INFO>
+			<ID value="0" />
+			<AGGREGATE_STATIC_LOCAL_MEM_SIZE value="0" />
+			<MAX_WORK_GROUP_SIZE num="3" values="1, 1, 1" />
+			<REQUIRED_WORK_GROUP_SIZE x="1" y="1" z="1" />
+			<FAST_RELAUNCH_DEPTH value="1" />
+			<USES_GLOBAL_WORK_OFFSET value="1" />
+		</RESOURCE_INFO>
+		<CONFIGURATION>
+			<INTERFACE port="clock_reset" type="clock"/>
+			<INTERFACE port="cra_irq" type="irq"/>
+			<INTERFACE port="cra" type="agent" cosim_name="k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0000r_function_cra_agent" read="1" write="1" width="64" is_volatile="0" size="128" latency="0" />
+		</CONFIGURATION>
+		<REQUIREMENTS>
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/linux64/lib/dspba/Libraries/sv/base/dspba_library_ver.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ecc_pkg.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_data_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_altera_syncram_wrapped.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_scfifo_wrapped.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ecc_decoder.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ecc_encoder.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ll_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ll_ram_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_valid_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_dspba_valid_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_staging_reg.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_mid_speed_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_latency_one_ram_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_latency_zero_ram_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_fifo_zero_width.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_high_speed_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_low_latency_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_zero_latency_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fanout_pipeline.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_std_synchronizer_nocut.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_decr_threshold.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_lookahead.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_reset_handler.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_lfsr.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_mlab_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_parameter_assert.svh" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_pop_stall_latency.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_sync.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_desync.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_dspba_buffer.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fast_pipeline.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_push.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_token_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_full_detector.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_decr_decr.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_loop_admit.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_shift_register_no_reset_dont_merge.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_memory_depth_quantization_pkg.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_iord.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_iord_stall_latency.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_iord_stall_valid.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_shift_register_no_reset.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_iowr.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_iowr_stall_latency.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_iowr_stall_valid.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_push_stall_latency.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_loop_profiler.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_sim_latency_tracker.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_clock2x_holder.v" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0000der_function_wrapper.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder_function.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0000EE1_clES2_E5Adder_B0.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0000S2_E5Adder_B0_branch.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0000ES2_E5Adder_B0_merge.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0000der_B0_merge_storage.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0000dder_B0_stall_region.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0000eree1_cles2_e5adder0.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0000EE1_clES2_E5Adder_B1.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0000S2_E5Adder_B1_branch.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0000ES2_E5Adder_B1_merge.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0000der_B1_merge_storage.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0000dder_B1_stall_region.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0001eree1_cles2_e5adder0.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0002eree1_cles2_e5adder0.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0003eree1_cles2_e5adder0.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0000eree1_cles2_e5adder1.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0004eree1_cles2_e5adder0.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0000adder1_full_detector.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_00002_e5adder1_data_fifo.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0005eree1_cles2_e5adder0.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0006eree1_cles2_e5adder0.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0007eree1_cles2_e5adder0.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0008eree1_cles2_e5adder0.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0009eree1_cles2_e5adder0.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0000eree1_cles2_e5adder6.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_000aeree1_cles2_e5adder0.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0001adder1_full_detector.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_00012_e5adder1_data_fifo.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_000beree1_cles2_e5adder0.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_00003fp0060o3fd0060oqf0z.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0000EE1_clES2_E5Adder_B2.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0000S2_E5Adder_B2_branch.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0000ranch_branch_storage.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0000ES2_E5Adder_B2_merge.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0000der_B2_merge_storage.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0000dder_B2_stall_region.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_000ceree1_cles2_e5adder0.sv" />
+			<FILE name="kernel_hdl/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder/k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_0000r_function_cra_agent.sv" />
+		</REQUIREMENTS>
+		<DATA>
+			<INTERFACE port="iord_bl_acl_c_ZN2cl4sycl3ext5intel4pipeI11a_read_pipefLi16EE9m_StorageE_pipe_channel" cosim_name="" type="host" width="32" true_lsu_width="4294967295" burstwidth="1" pipelined="true" addr_space="__channel" aspace_id="32" optype="read" criticality="1024" buffer_location="" group_id="0" connected_to_agent="0" depth="16" user_depth="16" ready_latency="0" chan_id="acl_c_ZN2cl4sycl3ext5intel4pipeI11a_read_pipefLi16EE9m_StorageE_pipe_channel" is_fifo="1" init="" almost_full_value="16" bypass_channel="1" inter_kernel_pipelining="0" write_success_ignored="0" sfks_id="0" is_sfks_entry="0" is_sfks_token="0" nb_sfks_entry_write="0" read_ready_ignored="0" bits_per_symbol ="0" uses_packets ="0" stall_free ="0" uses_empty ="0" first_symbol_in_high_order_bits ="0" uses_stall_latency ="1" channel_type ="sycl_kernel_pipe" />
+			<INTERFACE port="iord_bl_acl_c_ZN2cl4sycl3ext5intel4pipeI11b_read_pipefLi16EE9m_StorageE_pipe_channel" cosim_name="" type="host" width="32" true_lsu_width="4294967295" burstwidth="1" pipelined="true" addr_space="__channel" aspace_id="32" optype="read" criticality="1024" buffer_location="" group_id="0" connected_to_agent="0" depth="16" user_depth="16" ready_latency="0" chan_id="acl_c_ZN2cl4sycl3ext5intel4pipeI11b_read_pipefLi16EE9m_StorageE_pipe_channel" is_fifo="1" init="" almost_full_value="16" bypass_channel="1" inter_kernel_pipelining="0" write_success_ignored="0" sfks_id="0" is_sfks_entry="0" is_sfks_token="0" nb_sfks_entry_write="0" read_ready_ignored="0" bits_per_symbol ="0" uses_packets ="0" stall_free ="0" uses_empty ="0" first_symbol_in_high_order_bits ="0" uses_stall_latency ="1" channel_type ="sycl_kernel_pipe" />
+			<INTERFACE port="iowr_bl_acl_c_ZN2cl4sycl3ext5intel4pipeI12c_write_pipefLi16EE9m_StorageE_pipe_channel" cosim_name="" type="host" width="32" true_lsu_width="4294967295" burstwidth="1" pipelined="true" addr_space="__channel" aspace_id="32" optype="write" criticality="1024" buffer_location="" group_id="0" connected_to_agent="0" depth="16" user_depth="16" ready_latency="0" chan_id="acl_c_ZN2cl4sycl3ext5intel4pipeI12c_write_pipefLi16EE9m_StorageE_pipe_channel" is_fifo="1" init="" almost_full_value="-1" bypass_channel="1" inter_kernel_pipelining="0" write_success_ignored="0" sfks_id="0" is_sfks_entry="0" is_sfks_token="0" nb_sfks_entry_write="0" read_ready_ignored="0" bits_per_symbol ="0" uses_packets ="0" stall_free ="0" uses_empty ="0" first_symbol_in_high_order_bits ="0" uses_stall_latency ="1" channel_type ="sycl_kernel_pipe" />
+		</DATA>
+		<KERNEL_ARGS>
+		</KERNEL_ARGS>
+		<IPS>
+		</IPS>
+		<PRINTF_FORMAT_STRINGS>
+		</PRINTF_FORMAT_STRINGS>
+		<PRINTF_INTERFACES>
+		</PRINTF_INTERFACES>
+	</KERNEL>
+	</KERNEL_BUNDLE>
+	<KERNEL_BUNDLE name="_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer" kname="k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer" compute_units="1">
+	<KERNEL name="_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer" kname="k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer" filename="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0000ter_function_wrapper.sv" entity_name="k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0000ter_function_wrapper" version="1" cosim_name="" enable_global_profiling="1" workgroup_invariant="1" workitem_invariant="0" has_global_atomics="0" num_vector_lanes="1" num_profiling_signals="0">
+		<RESOURCE_INFO>
+			<ID value="1" />
+			<AGGREGATE_STATIC_LOCAL_MEM_SIZE value="0" />
+			<MAX_WORK_GROUP_SIZE num="3" values="1, 1, 1" />
+			<REQUIRED_WORK_GROUP_SIZE x="1" y="1" z="1" />
+			<FAST_RELAUNCH_DEPTH value="1" />
+			<USES_GLOBAL_WORK_OFFSET value="1" />
+		</RESOURCE_INFO>
+		<CONFIGURATION>
+			<INTERFACE port="clock_reset" type="clock"/>
+			<INTERFACE port="cra_irq" type="irq"/>
+			<INTERFACE port="cra" type="agent" cosim_name="k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0000r_function_cra_agent" read="1" write="1" width="64" is_volatile="0" size="256" latency="0" />
+		</CONFIGURATION>
+		<REQUIREMENTS>
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/linux64/lib/dspba/Libraries/sv/base/dspba_library_ver.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ecc_pkg.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_data_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_altera_syncram_wrapped.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_scfifo_wrapped.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ecc_decoder.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ecc_encoder.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ll_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ll_ram_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_valid_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_dspba_valid_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_staging_reg.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_mid_speed_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_latency_one_ram_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_latency_zero_ram_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_fifo_zero_width.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_high_speed_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_low_latency_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_zero_latency_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fanout_pipeline.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_std_synchronizer_nocut.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_decr_threshold.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_lookahead.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_reset_handler.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_lfsr.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_mlab_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_parameter_assert.svh" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_pop_stall_latency.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_sync.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_desync.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_dspba_buffer.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fast_pipeline.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_push.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_token_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_full_detector.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_decr_decr.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_loop_admit.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_shift_register_no_reset_dont_merge.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_top.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_permute_address.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_pipelined.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_enabled.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_basic_coalescer.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_simple.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_streaming.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_host.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_bursting_load_stores.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_non_aligned_write.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_read_cache.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_atomic.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_prefetch_block.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_wide_wrapper.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_streaming_prefetch.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_aligned_burst_coalesced_lsu.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_toggle_detect.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_debug_mem.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_coalesced_pipelined_write.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_coalesced_pipelined_read.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fifo_stall_valid_lookahead.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_global_load_store.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_burst_coalescer.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_coalescer_dynamic_timeout.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_data_aligner.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_read_cache.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_read_data_alignment.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_unaligned_controller.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_word_coalescer.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_write_data_alignment.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_write_kernel_downstream.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_shift_register_no_reset.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_memory_depth_quantization_pkg.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_iowr.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_iowr_stall_latency.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_iowr_stall_valid.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_push_stall_latency.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_loop_profiler.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_sim_latency_tracker.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_clock2x_holder.v" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0000ter_function_wrapper.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0000_E8A_writer_function.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0000_clES2_E8A_writer_B2.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0000E8A_writer_B2_branch.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0000ranch_branch_storage.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0000_E8A_writer_B2_merge.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0000ter_B2_merge_storage.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0000iter_B2_stall_region.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c000bee_cles2_e8a_writer0.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0000_clES2_E8A_writer_B0.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0000E8A_writer_B0_branch.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0000_E8A_writer_B0_merge.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0000ter_B0_merge_storage.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0000iter_B0_stall_region.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0000ee_cles2_e8a_writer0.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0000_clES2_E8A_writer_B1.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0000E8A_writer_B1_branch.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0000_E8A_writer_B1_merge.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0000ter_B1_merge_storage.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0000iter_B1_stall_region.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0001ee_cles2_e8a_writer0.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0002ee_cles2_e8a_writer0.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0000ee_cles2_e8a_writer1.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0003ee_cles2_e8a_writer0.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0000riter1_full_detector.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c00008a_writer1_data_fifo.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0004ee_cles2_e8a_writer0.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0005ee_cles2_e8a_writer0.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0006ee_cles2_e8a_writer0.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0007ee_cles2_e8a_writer0.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0008ee_cles2_e8a_writer0.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0009ee_cles2_e8a_writer0.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c000aee_cles2_e8a_writer0.sv" />
+			<FILE name="kernel_hdl/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer/k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_c0000r_function_cra_agent.sv" />
+		</REQUIREMENTS>
+		<DATA>
+			<INTERFACE port="iowr_bl_acl_c_ZN2cl4sycl3ext5intel4pipeI11a_read_pipefLi16EE9m_StorageE_pipe_channel" cosim_name="" type="host" width="32" true_lsu_width="4294967295" burstwidth="1" pipelined="true" addr_space="__channel" aspace_id="32" optype="write" criticality="1024" buffer_location="" group_id="0" connected_to_agent="0" depth="16" user_depth="16" ready_latency="0" chan_id="acl_c_ZN2cl4sycl3ext5intel4pipeI11a_read_pipefLi16EE9m_StorageE_pipe_channel" is_fifo="1" init="" almost_full_value="-1" bypass_channel="1" inter_kernel_pipelining="0" write_success_ignored="0" sfks_id="0" is_sfks_entry="0" is_sfks_token="0" nb_sfks_entry_write="0" read_ready_ignored="0" bits_per_symbol ="0" uses_packets ="0" stall_free ="0" uses_empty ="0" first_symbol_in_high_order_bits ="0" uses_stall_latency ="1" channel_type ="sycl_kernel_pipe" />
+			<INTERFACE port="load_k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer" cosim_name="" type="host" width="512" true_lsu_width="32" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="0" optype="read" criticality="255" buffer_location="DDR" group_id="0" connected_to_agent="0" />
+		</DATA>
+		<KERNEL_ARGS>
+			<ARGUMENT name="arg0" cosim_name="" opencl_access_type="ACL_ARG_ADDR_GLOBAL" opencl_type_category="ACL_ARG_MEM_OBJ" size="8" alignment="1024" type_qualifier="" access_qualifier="none" type_name="float*" host_accessible="" pipe_channel_id="" >
+			</ARGUMENT>
+			<ARGUMENT name="arg1" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="8" alignment="1" type_qualifier="" access_qualifier="none" type_name="class.cl::sycl::range" host_accessible="" pipe_channel_id="" >
+			</ARGUMENT>
+			<ARGUMENT name="arg2" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="8" alignment="1" type_qualifier="" access_qualifier="none" type_name="class.cl::sycl::range" host_accessible="" pipe_channel_id="" >
+			</ARGUMENT>
+			<ARGUMENT name="arg3" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="8" alignment="1" type_qualifier="" access_qualifier="none" type_name="class.cl::sycl::range" host_accessible="" pipe_channel_id="" >
+			</ARGUMENT>
+		</KERNEL_ARGS>
+		<IPS>
+		</IPS>
+		<PRINTF_FORMAT_STRINGS>
+		</PRINTF_FORMAT_STRINGS>
+		<PRINTF_INTERFACES>
+		</PRINTF_INTERFACES>
+	</KERNEL>
+	</KERNEL_BUNDLE>
+	<KERNEL_BUNDLE name="_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer" kname="k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer" compute_units="1">
+	<KERNEL name="_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer" kname="k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer" filename="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0000ter_function_wrapper.sv" entity_name="k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0000ter_function_wrapper" version="1" cosim_name="" enable_global_profiling="1" workgroup_invariant="1" workitem_invariant="0" has_global_atomics="0" num_vector_lanes="1" num_profiling_signals="0">
+		<RESOURCE_INFO>
+			<ID value="2" />
+			<AGGREGATE_STATIC_LOCAL_MEM_SIZE value="0" />
+			<MAX_WORK_GROUP_SIZE num="3" values="1, 1, 1" />
+			<REQUIRED_WORK_GROUP_SIZE x="1" y="1" z="1" />
+			<FAST_RELAUNCH_DEPTH value="1" />
+			<USES_GLOBAL_WORK_OFFSET value="1" />
+		</RESOURCE_INFO>
+		<CONFIGURATION>
+			<INTERFACE port="clock_reset" type="clock"/>
+			<INTERFACE port="cra_irq" type="irq"/>
+			<INTERFACE port="cra" type="agent" cosim_name="k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0000r_function_cra_agent" read="1" write="1" width="64" is_volatile="0" size="256" latency="0" />
+		</CONFIGURATION>
+		<REQUIREMENTS>
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/linux64/lib/dspba/Libraries/sv/base/dspba_library_ver.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ecc_pkg.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_data_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_altera_syncram_wrapped.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_scfifo_wrapped.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ecc_decoder.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ecc_encoder.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ll_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ll_ram_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_valid_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_dspba_valid_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_staging_reg.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_mid_speed_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_latency_one_ram_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_latency_zero_ram_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_fifo_zero_width.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_high_speed_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_low_latency_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_zero_latency_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fanout_pipeline.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_std_synchronizer_nocut.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_decr_threshold.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_lookahead.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_reset_handler.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_lfsr.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_mlab_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_parameter_assert.svh" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_pop_stall_latency.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_sync.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_desync.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_dspba_buffer.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fast_pipeline.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_push.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_token_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_full_detector.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_decr_decr.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_loop_admit.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_shift_register_no_reset_dont_merge.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_top.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_permute_address.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_pipelined.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_enabled.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_basic_coalescer.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_simple.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_streaming.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_host.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_bursting_load_stores.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_non_aligned_write.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_read_cache.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_atomic.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_prefetch_block.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_wide_wrapper.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_streaming_prefetch.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_aligned_burst_coalesced_lsu.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_toggle_detect.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_debug_mem.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_coalesced_pipelined_write.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_coalesced_pipelined_read.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fifo_stall_valid_lookahead.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_global_load_store.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_burst_coalescer.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_coalescer_dynamic_timeout.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_data_aligner.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_read_cache.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_read_data_alignment.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_unaligned_controller.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_word_coalescer.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_write_data_alignment.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_write_kernel_downstream.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_shift_register_no_reset.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_memory_depth_quantization_pkg.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_iowr.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_iowr_stall_latency.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_iowr_stall_valid.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_push_stall_latency.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_loop_profiler.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_sim_latency_tracker.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_clock2x_holder.v" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0000ter_function_wrapper.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0000_E8B_writer_function.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0000_clES2_E8B_writer_B2.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0000E8B_writer_B2_branch.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0000ranch_branch_storage.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0000_E8B_writer_B2_merge.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0000ter_B2_merge_storage.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0000iter_B2_stall_region.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_000be0_cles2_e8b_writer0.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0000_clES2_E8B_writer_B0.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0000E8B_writer_B0_branch.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0000_E8B_writer_B0_merge.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0000ter_B0_merge_storage.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0000iter_B0_stall_region.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0000e0_cles2_e8b_writer0.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0000_clES2_E8B_writer_B1.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0000E8B_writer_B1_branch.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0000_E8B_writer_B1_merge.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0000ter_B1_merge_storage.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0000iter_B1_stall_region.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0001e0_cles2_e8b_writer0.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0002e0_cles2_e8b_writer0.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0000e0_cles2_e8b_writer1.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0003e0_cles2_e8b_writer0.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0000riter1_full_detector.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_00008b_writer1_data_fifo.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0004e0_cles2_e8b_writer0.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0005e0_cles2_e8b_writer0.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0006e0_cles2_e8b_writer0.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0007e0_cles2_e8b_writer0.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0008e0_cles2_e8b_writer0.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0009e0_cles2_e8b_writer0.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_000ae0_cles2_e8b_writer0.sv" />
+			<FILE name="kernel_hdl/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer/k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_0000r_function_cra_agent.sv" />
+		</REQUIREMENTS>
+		<DATA>
+			<INTERFACE port="iowr_bl_acl_c_ZN2cl4sycl3ext5intel4pipeI11b_read_pipefLi16EE9m_StorageE_pipe_channel" cosim_name="" type="host" width="32" true_lsu_width="4294967295" burstwidth="1" pipelined="true" addr_space="__channel" aspace_id="32" optype="write" criticality="1024" buffer_location="" group_id="0" connected_to_agent="0" depth="16" user_depth="16" ready_latency="0" chan_id="acl_c_ZN2cl4sycl3ext5intel4pipeI11b_read_pipefLi16EE9m_StorageE_pipe_channel" is_fifo="1" init="" almost_full_value="-1" bypass_channel="1" inter_kernel_pipelining="0" write_success_ignored="0" sfks_id="0" is_sfks_entry="0" is_sfks_token="0" nb_sfks_entry_write="0" read_ready_ignored="0" bits_per_symbol ="0" uses_packets ="0" stall_free ="0" uses_empty ="0" first_symbol_in_high_order_bits ="0" uses_stall_latency ="1" channel_type ="sycl_kernel_pipe" />
+			<INTERFACE port="load_k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer" cosim_name="" type="host" width="512" true_lsu_width="32" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="0" optype="read" criticality="255" buffer_location="DDR" group_id="0" connected_to_agent="0" />
+		</DATA>
+		<KERNEL_ARGS>
+			<ARGUMENT name="arg0" cosim_name="" opencl_access_type="ACL_ARG_ADDR_GLOBAL" opencl_type_category="ACL_ARG_MEM_OBJ" size="8" alignment="1024" type_qualifier="" access_qualifier="none" type_name="float*" host_accessible="" pipe_channel_id="" >
+			</ARGUMENT>
+			<ARGUMENT name="arg1" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="8" alignment="1" type_qualifier="" access_qualifier="none" type_name="class.cl::sycl::range" host_accessible="" pipe_channel_id="" >
+			</ARGUMENT>
+			<ARGUMENT name="arg2" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="8" alignment="1" type_qualifier="" access_qualifier="none" type_name="class.cl::sycl::range" host_accessible="" pipe_channel_id="" >
+			</ARGUMENT>
+			<ARGUMENT name="arg3" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="8" alignment="1" type_qualifier="" access_qualifier="none" type_name="class.cl::sycl::range" host_accessible="" pipe_channel_id="" >
+			</ARGUMENT>
+		</KERNEL_ARGS>
+		<IPS>
+		</IPS>
+		<PRINTF_FORMAT_STRINGS>
+		</PRINTF_FORMAT_STRINGS>
+		<PRINTF_INTERFACES>
+		</PRINTF_INTERFACES>
+	</KERNEL>
+	</KERNEL_BUNDLE>
+	<KERNEL_BUNDLE name="_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader" kname="k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader" compute_units="1">
+	<KERNEL name="_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader" kname="k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader" filename="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0000der_function_wrapper.sv" entity_name="k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0000der_function_wrapper" version="1" cosim_name="" enable_global_profiling="1" workgroup_invariant="1" workitem_invariant="0" has_global_atomics="0" num_vector_lanes="1" num_profiling_signals="0">
+		<RESOURCE_INFO>
+			<ID value="3" />
+			<AGGREGATE_STATIC_LOCAL_MEM_SIZE value="0" />
+			<MAX_WORK_GROUP_SIZE num="3" values="1, 1, 1" />
+			<REQUIRED_WORK_GROUP_SIZE x="1" y="1" z="1" />
+			<FAST_RELAUNCH_DEPTH value="1" />
+			<USES_GLOBAL_WORK_OFFSET value="1" />
+		</RESOURCE_INFO>
+		<CONFIGURATION>
+			<INTERFACE port="clock_reset" type="clock"/>
+			<INTERFACE port="cra_irq" type="irq"/>
+			<INTERFACE port="cra" type="agent" cosim_name="k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0000r_function_cra_agent" read="1" write="1" width="64" is_volatile="0" size="256" latency="0" />
+		</CONFIGURATION>
+		<REQUIREMENTS>
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/linux64/lib/dspba/Libraries/sv/base/dspba_library_ver.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ecc_pkg.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_data_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_altera_syncram_wrapped.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_scfifo_wrapped.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ecc_decoder.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ecc_encoder.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ll_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ll_ram_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_valid_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_dspba_valid_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_staging_reg.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_mid_speed_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_latency_one_ram_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_latency_zero_ram_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_fifo_zero_width.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_high_speed_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_low_latency_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_zero_latency_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fanout_pipeline.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_std_synchronizer_nocut.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_decr_threshold.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_lookahead.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_reset_handler.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_lfsr.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_mlab_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_parameter_assert.svh" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_pop_stall_latency.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_sync.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_desync.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_dspba_buffer.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fast_pipeline.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_push.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_token_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_full_detector.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_decr_decr.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_loop_admit.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_shift_register_no_reset_dont_merge.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_memory_depth_quantization_pkg.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_iord.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_iord_stall_latency.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_iord_stall_valid.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_shift_register_no_reset.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_top.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_permute_address.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_pipelined.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_enabled.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_basic_coalescer.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_simple.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_streaming.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_host.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_bursting_load_stores.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_non_aligned_write.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_read_cache.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_atomic.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_prefetch_block.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_wide_wrapper.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_streaming_prefetch.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_aligned_burst_coalesced_lsu.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_toggle_detect.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_debug_mem.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_coalesced_pipelined_write.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_coalesced_pipelined_read.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fifo_stall_valid_lookahead.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_global_load_store.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_burst_coalescer.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_coalescer_dynamic_timeout.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_data_aligner.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_read_cache.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_read_data_alignment.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_unaligned_controller.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_word_coalescer.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_write_data_alignment.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_write_kernel_downstream.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_push_stall_latency.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_loop_profiler.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_sim_latency_tracker.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_clock2x_holder.v" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0000der_function_wrapper.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0000_E8C_reader_function.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0000_clES2_E8C_reader_B2.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0000E8C_reader_B2_branch.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0000ranch_branch_storage.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0000_E8C_reader_B2_merge.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0000der_B2_merge_storage.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0000ader_B2_stall_region.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_000de2_cles2_e8c_reader0.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0000_clES2_E8C_reader_B0.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0000E8C_reader_B0_branch.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0000_E8C_reader_B0_merge.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0000der_B0_merge_storage.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0000ader_B0_stall_region.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0000e2_cles2_e8c_reader0.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0000_clES2_E8C_reader_B1.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0000E8C_reader_B1_branch.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0000_E8C_reader_B1_merge.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0000der_B1_merge_storage.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0000ader_B1_stall_region.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0001e2_cles2_e8c_reader0.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0002e2_cles2_e8c_reader0.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0000e2_cles2_e8c_reader1.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0003e2_cles2_e8c_reader0.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0000eader1_full_detector.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_00008c_reader1_data_fifo.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0004e2_cles2_e8c_reader0.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0005e2_cles2_e8c_reader0.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0006e2_cles2_e8c_reader0.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0007e2_cles2_e8c_reader0.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0008e2_cles2_e8c_reader0.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0000e2_cles2_e8c_reader5.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0009e2_cles2_e8c_reader0.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0001eader1_full_detector.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_00018c_reader1_data_fifo.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_000ae2_cles2_e8c_reader0.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_000be2_cles2_e8c_reader0.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_000ce2_cles2_e8c_reader0.sv" />
+			<FILE name="kernel_hdl/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader/k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_0000r_function_cra_agent.sv" />
+		</REQUIREMENTS>
+		<DATA>
+			<INTERFACE port="iord_bl_acl_c_ZN2cl4sycl3ext5intel4pipeI12c_write_pipefLi16EE9m_StorageE_pipe_channel" cosim_name="" type="host" width="32" true_lsu_width="4294967295" burstwidth="1" pipelined="true" addr_space="__channel" aspace_id="32" optype="read" criticality="1024" buffer_location="" group_id="0" connected_to_agent="0" depth="16" user_depth="16" ready_latency="0" chan_id="acl_c_ZN2cl4sycl3ext5intel4pipeI12c_write_pipefLi16EE9m_StorageE_pipe_channel" is_fifo="1" init="" almost_full_value="16" bypass_channel="1" inter_kernel_pipelining="0" write_success_ignored="0" sfks_id="0" is_sfks_entry="0" is_sfks_token="0" nb_sfks_entry_write="0" read_ready_ignored="0" bits_per_symbol ="0" uses_packets ="0" stall_free ="0" uses_empty ="0" first_symbol_in_high_order_bits ="0" uses_stall_latency ="1" channel_type ="sycl_kernel_pipe" />
+			<INTERFACE port="unnamed_k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader4_k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader" cosim_name="" type="host" width="512" true_lsu_width="32" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="0" optype="write" criticality="255" buffer_location="DDR" group_id="0" connected_to_agent="0" />
+		</DATA>
+		<KERNEL_ARGS>
+			<ARGUMENT name="arg0" cosim_name="" opencl_access_type="ACL_ARG_ADDR_GLOBAL" opencl_type_category="ACL_ARG_MEM_OBJ" size="8" alignment="1024" type_qualifier="" access_qualifier="none" type_name="float*" host_accessible="" pipe_channel_id="" >
+			</ARGUMENT>
+			<ARGUMENT name="arg1" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="8" alignment="1" type_qualifier="" access_qualifier="none" type_name="class.cl::sycl::range" host_accessible="" pipe_channel_id="" >
+			</ARGUMENT>
+			<ARGUMENT name="arg2" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="8" alignment="1" type_qualifier="" access_qualifier="none" type_name="class.cl::sycl::range" host_accessible="" pipe_channel_id="" >
+			</ARGUMENT>
+			<ARGUMENT name="arg3" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="8" alignment="1" type_qualifier="" access_qualifier="none" type_name="class.cl::sycl::range" host_accessible="" pipe_channel_id="" >
+			</ARGUMENT>
+		</KERNEL_ARGS>
+		<IPS>
+		</IPS>
+		<PRINTF_FORMAT_STRINGS>
+		</PRINTF_FORMAT_STRINGS>
+		<PRINTF_INTERFACES>
+		</PRINTF_INTERFACES>
+	</KERNEL>
+	</KERNEL_BUNDLE>
+	<GLOBAL_MEM_LATENCY kernel_side_mem_latency="8" arbitration_latency="5" />
+	<STRUCT_TYPE_DEFS>
+	</STRUCT_TYPE_DEFS>
+	<KERNEL_INTERCONNECT>
+		<USM_INTERCONNECT value="0" />
+		<GLOBAL_ATOMICS value="0" />
+		<GLOBAL_INTERCONNECT gmem_id="0" name="DDR" type="1" />
+		<GLOBAL_READS memory="DDR" aspace="1024" />
+		<GLOBAL_READS memory="DDR" aspace="1024" />
+		<GLOBAL_WRITES memory="DDR" aspace="1024" />
+	</KERNEL_INTERCONNECT>
+</KERNEL_LIST>

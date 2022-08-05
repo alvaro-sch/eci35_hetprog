@@ -1,0 +1,1471 @@
+{
+  "columns":
+  ["", "ALUTs", "FFs", "RAMs", "DSPs", "MLABs", "Details"]
+  , "debug_enabled":"true"
+  , "type":"module"
+  , "total_percent":
+  [50.4232, 26.2113, 25.7757, 27.3611, 22.4306]
+  , "total":
+  [488485, 962074, 3207, 1292, 34]
+  , "name":"Kernel System"
+  , "max_resources":
+  [1866240, 3732480, 11721, 5760, 93312]
+  , "children":
+  [
+    {
+      "name":"Static Partition"
+      , "type":"partition"
+      , "children":
+      [
+        {
+          "name":"Board interface"
+          , "type":"resource"
+          , "data":
+          [466792, 928428, 3039, 1291, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Platform interface logic."
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"Global interconnect"
+      , "type":"resource"
+      , "data":
+      [13691, 19807, 78, 0, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Global interconnect for 2 global loads and 1 global store. Reduce number of global loads and stores to simplify global interconnect."
+        }
+        , {
+          "type":"brief"
+          , "text":"For 2 global loads and 1 global store."
+        }
+        , {
+          "type":"text"
+          , "text":"See %L for more information"
+          , "links":
+          [
+            {
+              "guide":"Best Practices Guide : Global Memory Interconnect"
+              , "link":"file:////media/libre/oneapi/compiler/2022.1.0/linux/lib/oclfpga/aoc_help_pages/hnj1476724450050.html"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"System description ROM"
+      , "type":"resource"
+      , "data":
+      [2, 71, 2, 0, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"This read-only memory contains information for the host about the system and about each kernel in the system, including kernel names, arguments, and attributes. The system description ROM ensures that the binary image on the FPGA is compatible with the host program."
+        }
+        , {
+          "type":"brief"
+          , "text":"Contains information for the host."
+        }
+      ]
+    }
+    , {
+      "name":"Pipe resources"
+      , "type":"group"
+      , "children":
+      [
+        {
+          "name":"Pipe (cl::sycl::ext::intel::pipe<a_read_pipe, float, 16>)"
+          , "type":"resource"
+          , "data":
+          [11, 102, 0, 0, 2]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Pipe is implemented 32 bits wide by 16 deep."
+            }
+            , {
+              "type":"brief"
+              , "text":"32b wide by 16 deep."
+            }
+            , {
+              "type":"text"
+              , "text":"See %L for more information"
+              , "links":
+              [
+                {
+                  "guide":"Best Practices Guide : Channels"
+                  , "link":"file:////media/libre/oneapi/compiler/2022.1.0/linux/lib/oclfpga/aoc_help_pages/qah1476410829821.html"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"Pipe (cl::sycl::ext::intel::pipe<b_read_pipe, float, 16>)"
+          , "type":"resource"
+          , "data":
+          [11, 102, 0, 0, 2]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Pipe is implemented 32 bits wide by 16 deep."
+            }
+            , {
+              "type":"brief"
+              , "text":"32b wide by 16 deep."
+            }
+            , {
+              "type":"text"
+              , "text":"See %L for more information"
+              , "links":
+              [
+                {
+                  "guide":"Best Practices Guide : Channels"
+                  , "link":"file:////media/libre/oneapi/compiler/2022.1.0/linux/lib/oclfpga/aoc_help_pages/qah1476410829821.html"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"Pipe (cl::sycl::ext::intel::pipe<c_write_pipe, float, 16>)"
+          , "type":"resource"
+          , "data":
+          [11, 102, 0, 0, 2]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Pipe is implemented 32 bits wide by 16 deep."
+            }
+            , {
+              "type":"brief"
+              , "text":"32b wide by 16 deep."
+            }
+            , {
+              "type":"text"
+              , "text":"See %L for more information"
+              , "links":
+              [
+                {
+                  "guide":"Best Practices Guide : Channels"
+                  , "link":"file:////media/libre/oneapi/compiler/2022.1.0/linux/lib/oclfpga/aoc_help_pages/qah1476410829821.html"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"B_writer"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [0.218161, 0.123189, 0.104033, 0.273014, 0]
+      , "total_kernel_resources":
+      [2139, 3883, 32, 0, 8]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+        , {
+          "type":"brief"
+          , "text":"1 compute unit."
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Function overhead"
+          , "type":"resource"
+          , "data":
+          [1463, 1467, 0, 0, 6]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Kernel dispatch logic."
+            }
+            , {
+              "type":"brief"
+              , "text":"Kernel dispatch logic."
+            }
+          ]
+        }
+        , {
+          "name":"Coalesced Private Variables: \n - 'LinearIndex' (accessor.hpp:1685)\n - 'i' (add_array_pipes_sycl.cc:71)"
+          , "type":"resource"
+          , "data":
+          [8, 12, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"accessor.hpp"
+                , "line":1685
+              }
+            ]
+            , [
+              {
+                "filename":"add_array_pipes_sycl.cc"
+                , "line":71
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 6 bits"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n1 reg, 6 width"
+            }
+          ]
+        }
+        , {
+          "name":"Private Variable: \n - 'i' (add_array_pipes_sycl.cc:71)"
+          , "type":"resource"
+          , "data":
+          [8, 128, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"add_array_pipes_sycl.cc"
+                , "line":71
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 64 bits"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n1 reg, 64 width"
+            }
+          ]
+        }
+        , {
+          "name":"B_writer.B1"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [33, 169, 1, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [33, 169, 1, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [86, 9, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"handler.hpp:1079 > add_array_pipes_sycl.cc:71"
+                  , "type":"resource"
+                  , "data":
+                  [86, 9, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":1079
+                      }
+                      , {
+                        "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                        , "line":71
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [49, 78, 2, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"handler.hpp:1079 > add_array_pipes_sycl.cc:71"
+                  , "type":"resource"
+                  , "data":
+                  [4, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":1079
+                      }
+                      , {
+                        "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                        , "line":71
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"1-bit Xor"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [1, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"6-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [2, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"handler.hpp:1079 > add_array_pipes_sycl.cc:72 > \npipes.hpp:75"
+                  , "type":"resource"
+                  , "data":
+                  [488, 2019, 29, 0, 2]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":1079
+                      }
+                      , {
+                        "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                        , "line":72
+                      }
+                      , {
+                        "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/ext/intel/pipes.hpp"
+                        , "line":75
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [485, 2017, 29, 0, 2]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                    , {
+                      "name":"Pipe Write"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 2, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"Adder"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [0.128732, 0.0937714, 0.0452514, 0.0255951, 0.0173611]
+      , "total_kernel_resources":
+      [1630, 1689, 3, 1, 6]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+        , {
+          "type":"brief"
+          , "text":"1 compute unit."
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Function overhead"
+          , "type":"resource"
+          , "data":
+          [1463, 1467, 0, 0, 6]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Kernel dispatch logic."
+            }
+            , {
+              "type":"brief"
+              , "text":"Kernel dispatch logic."
+            }
+          ]
+        }
+        , {
+          "name":"Private Variable: \n - 'i' (add_array_pipes_sycl.cc:81)"
+          , "type":"resource"
+          , "data":
+          [8, 12, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"add_array_pipes_sycl.cc"
+                , "line":81
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 6 bits"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n1 reg, 6 width"
+            }
+          ]
+        }
+        , {
+          "name":"Adder.B1"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [35, 45, 1, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [35, 45, 1, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [22, 9, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"handler.hpp:1079 > add_array_pipes_sycl.cc:81"
+                  , "type":"resource"
+                  , "data":
+                  [22, 9, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":1079
+                      }
+                      , {
+                        "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                        , "line":81
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [46, 58, 2, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"handler.hpp:1079 > add_array_pipes_sycl.cc:81"
+                  , "type":"resource"
+                  , "data":
+                  [3, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":1079
+                      }
+                      , {
+                        "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                        , "line":81
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"6-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [2, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"handler.hpp:1079 > add_array_pipes_sycl.cc:82"
+                  , "type":"resource"
+                  , "data":
+                  [48, 96, 0, 1, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":1079
+                      }
+                      , {
+                        "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                        , "line":82
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Floating-point Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [48, 96, 0, 1, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"handler.hpp:1079 > add_array_pipes_sycl.cc:82 > \npipes.hpp:62"
+                  , "type":"resource"
+                  , "data":
+                  [2, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":1079
+                      }
+                      , {
+                        "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                        , "line":82
+                      }
+                      , {
+                        "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/ext/intel/pipes.hpp"
+                        , "line":62
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Pipe Read"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [2, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"handler.hpp:1079 > add_array_pipes_sycl.cc:82 > \npipes.hpp:75"
+                  , "type":"resource"
+                  , "data":
+                  [3, 2, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":1079
+                      }
+                      , {
+                        "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                        , "line":82
+                      }
+                      , {
+                        "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/ext/intel/pipes.hpp"
+                        , "line":75
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Pipe Write"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 2, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"C_reader"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [0.216401, 0.116759, 0.107355, 0.179166, 0]
+      , "total_kernel_resources":
+      [2059, 4007, 21, 0, 6]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+        , {
+          "type":"brief"
+          , "text":"1 compute unit."
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Function overhead"
+          , "type":"resource"
+          , "data":
+          [1463, 1467, 0, 0, 6]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Kernel dispatch logic."
+            }
+            , {
+              "type":"brief"
+              , "text":"Kernel dispatch logic."
+            }
+          ]
+        }
+        , {
+          "name":"Coalesced Private Variables: \n - 'i' (add_array_pipes_sycl.cc:92)\n - 'LinearIndex' (accessor.hpp:1678)"
+          , "type":"resource"
+          , "data":
+          [8, 12, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"accessor.hpp"
+                , "line":1678
+              }
+            ]
+            , [
+              {
+                "filename":"add_array_pipes_sycl.cc"
+                , "line":92
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 6 bits"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n1 reg, 6 width"
+            }
+          ]
+        }
+        , {
+          "name":"Private Variable: \n - 'i' (add_array_pipes_sycl.cc:92)"
+          , "type":"resource"
+          , "data":
+          [8, 128, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"add_array_pipes_sycl.cc"
+                , "line":92
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 64 bits"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n1 reg, 64 width"
+            }
+          ]
+        }
+        , {
+          "name":"C_reader.B1"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [37, 172, 1, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [37, 172, 1, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [86, 9, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"handler.hpp:1079 > add_array_pipes_sycl.cc:92"
+                  , "type":"resource"
+                  , "data":
+                  [86, 9, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":1079
+                      }
+                      , {
+                        "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                        , "line":92
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [63, 91, 3, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"handler.hpp:1079 > add_array_pipes_sycl.cc:92"
+                  , "type":"resource"
+                  , "data":
+                  [3, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":1079
+                      }
+                      , {
+                        "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                        , "line":92
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"6-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [2, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"handler.hpp:1079 > add_array_pipes_sycl.cc:93"
+                  , "type":"resource"
+                  , "data":
+                  [390, 2128, 17, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":1079
+                      }
+                      , {
+                        "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                        , "line":93
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [390, 2128, 17, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"handler.hpp:1079 > add_array_pipes_sycl.cc:93 > \npipes.hpp:62"
+                  , "type":"resource"
+                  , "data":
+                  [1, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":1079
+                      }
+                      , {
+                        "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                        , "line":93
+                      }
+                      , {
+                        "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/ext/intel/pipes.hpp"
+                        , "line":62
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Pipe Read"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"A_writer"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [0.218161, 0.123189, 0.104033, 0.273014, 0]
+      , "total_kernel_resources":
+      [2139, 3883, 32, 0, 8]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+        , {
+          "type":"brief"
+          , "text":"1 compute unit."
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Function overhead"
+          , "type":"resource"
+          , "data":
+          [1463, 1467, 0, 0, 6]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Kernel dispatch logic."
+            }
+            , {
+              "type":"brief"
+              , "text":"Kernel dispatch logic."
+            }
+          ]
+        }
+        , {
+          "name":"Coalesced Private Variables: \n - 'LinearIndex' (accessor.hpp:1685)\n - 'i' (add_array_pipes_sycl.cc:61)"
+          , "type":"resource"
+          , "data":
+          [8, 12, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"accessor.hpp"
+                , "line":1685
+              }
+            ]
+            , [
+              {
+                "filename":"add_array_pipes_sycl.cc"
+                , "line":61
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 6 bits"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n1 reg, 6 width"
+            }
+          ]
+        }
+        , {
+          "name":"Private Variable: \n - 'i' (add_array_pipes_sycl.cc:61)"
+          , "type":"resource"
+          , "data":
+          [8, 128, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"add_array_pipes_sycl.cc"
+                , "line":61
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 64 bits"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n1 reg, 64 width"
+            }
+          ]
+        }
+        , {
+          "name":"A_writer.B1"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [33, 169, 1, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [33, 169, 1, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [86, 9, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"handler.hpp:1079 > add_array_pipes_sycl.cc:61"
+                  , "type":"resource"
+                  , "data":
+                  [86, 9, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":1079
+                      }
+                      , {
+                        "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                        , "line":61
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [49, 78, 2, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"handler.hpp:1079 > add_array_pipes_sycl.cc:61"
+                  , "type":"resource"
+                  , "data":
+                  [4, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":1079
+                      }
+                      , {
+                        "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                        , "line":61
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"1-bit Xor"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [1, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"6-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [2, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"handler.hpp:1079 > add_array_pipes_sycl.cc:62 > \npipes.hpp:75"
+                  , "type":"resource"
+                  , "data":
+                  [488, 2019, 29, 0, 2]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/CL/sycl/handler.hpp"
+                        , "line":1079
+                      }
+                      , {
+                        "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                        , "line":62
+                      }
+                      , {
+                        "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/ext/intel/pipes.hpp"
+                        , "line":75
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [485, 2017, 29, 0, 2]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                    , {
+                      "name":"Pipe Write"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 2, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

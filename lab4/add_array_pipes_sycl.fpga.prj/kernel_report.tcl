@@ -1,0 +1,3 @@
+proc getEntityNames {} {
+  return [list kernel_system k0_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE1_clES2_E5Adder,0 k1_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer,0 k2_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer,0 k3_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader,0]
+}

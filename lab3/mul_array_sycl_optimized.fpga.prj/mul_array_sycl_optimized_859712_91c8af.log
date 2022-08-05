@@ -1,0 +1,3 @@
+Compiler Command: aoc -o /tmp/mul_array_sycl_optimized-859712-91c8af.aocr /tmp/mul_array_sycl_optimized-8603ad-d2512a.spv -sycl -rtl -dep-files=/tmp/mul_array_sycl_optimized-ce004b.d -output-report-folder=mul_array_sycl_optimized.fpga.prj -g -hardware -board=intel_s10sx_pac:pac_s10
+System name: mul_array_sycl_optimized_859712_91c8af
+

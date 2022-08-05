@@ -1,0 +1,303 @@
+{
+  "name":"loop_attributes"
+  , "id":82
+  , "nodes":
+  [
+    {
+      "name":"Adder"
+      , "id":1
+      , "clk":"No"
+      , "fmax":"480.00"
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"Adder.B0"
+          , "id":5
+          , "af":"480.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"17.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+        , {
+          "name":"Adder.B1"
+          , "id":6
+          , "af":"480.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Enabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"119.000000"
+          , "mi":"1"
+          , "pl":"Yes"
+          , "tc":"32"
+          , "tn":"1"
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Hyper-Optimized loop structure: enabled."
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                , "line":81
+              }
+            ]
+          ]
+          , "type":"loop"
+        }
+        , {
+          "name":"Adder.B2"
+          , "id":7
+          , "af":"480.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"17.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+      ]
+    }
+    , {
+      "name":"A_writer"
+      , "id":2
+      , "clk":"No"
+      , "fmax":"480.00"
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"A_writer.B0"
+          , "id":8
+          , "af":"480.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"17.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+        , {
+          "name":"A_writer.B1"
+          , "id":9
+          , "af":"432.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Enabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"849.000000"
+          , "mi":"1"
+          , "pl":"Yes"
+          , "tc":"32"
+          , "tn":"1"
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Hyper-Optimized loop structure: enabled."
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                , "line":61
+              }
+            ]
+          ]
+          , "type":"loop"
+        }
+        , {
+          "name":"A_writer.B2"
+          , "id":10
+          , "af":"480.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"17.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+      ]
+    }
+    , {
+      "name":"B_writer"
+      , "id":3
+      , "clk":"No"
+      , "fmax":"480.00"
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"B_writer.B0"
+          , "id":11
+          , "af":"480.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"17.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+        , {
+          "name":"B_writer.B1"
+          , "id":12
+          , "af":"432.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Enabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"849.000000"
+          , "mi":"1"
+          , "pl":"Yes"
+          , "tc":"32"
+          , "tn":"1"
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Hyper-Optimized loop structure: enabled."
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                , "line":71
+              }
+            ]
+          ]
+          , "type":"loop"
+        }
+        , {
+          "name":"B_writer.B2"
+          , "id":13
+          , "af":"480.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"17.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+      ]
+    }
+    , {
+      "name":"C_reader"
+      , "id":4
+      , "clk":"No"
+      , "fmax":"480.00"
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"C_reader.B0"
+          , "id":14
+          , "af":"480.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"17.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+        , {
+          "name":"C_reader.B1"
+          , "id":15
+          , "af":"432.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Enabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"135.000000"
+          , "mi":"1"
+          , "pl":"Yes"
+          , "tc":"32"
+          , "tn":"1"
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Hyper-Optimized loop structure: enabled."
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                , "line":92
+              }
+            ]
+          ]
+          , "type":"loop"
+        }
+        , {
+          "name":"C_reader.B2"
+          , "id":16
+          , "af":"480.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"17.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "performanceSummary":
+  {
+    "name":"Kernel Summary"
+    , "columns":
+    ["Kernel Name", "Kernel Type", "Autorun", "Workgroup Size", "# Compute Units", "Hyper-Optimized Handshaking"]
+    , "children":
+    [
+      {
+        "name":"B_writer"
+        , "data":
+        [
+          "Single work-item"
+          , "No"
+          , [1, 1, 1]
+          , 1
+          , "On"
+        ]
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Kernel type: Single work-item"
+          }
+          , {
+            "type":"text"
+            , "text":"Required workgroup size: (1, 1, 1)"
+          }
+          , {
+            "type":"text"
+            , "text":"Maximum workgroup size: 1"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":""
+              , "line":0
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Adder"
+        , "data":
+        [
+          "Single work-item"
+          , "No"
+          , [1, 1, 1]
+          , 1
+          , "On"
+        ]
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Kernel type: Single work-item"
+          }
+          , {
+            "type":"text"
+            , "text":"Required workgroup size: (1, 1, 1)"
+          }
+          , {
+            "type":"text"
+            , "text":"Maximum workgroup size: 1"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":""
+              , "line":0
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"C_reader"
+        , "data":
+        [
+          "Single work-item"
+          , "No"
+          , [1, 1, 1]
+          , 1
+          , "On"
+        ]
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Kernel type: Single work-item"
+          }
+          , {
+            "type":"text"
+            , "text":"Required workgroup size: (1, 1, 1)"
+          }
+          , {
+            "type":"text"
+            , "text":"Maximum workgroup size: 1"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":""
+              , "line":0
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"A_writer"
+        , "data":
+        [
+          "Single work-item"
+          , "No"
+          , [1, 1, 1]
+          , 1
+          , "On"
+        ]
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Kernel type: Single work-item"
+          }
+          , {
+            "type":"text"
+            , "text":"Required workgroup size: (1, 1, 1)"
+          }
+          , {
+            "type":"text"
+            , "text":"Maximum workgroup size: 1"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":""
+              , "line":0
+            }
+          ]
+        ]
+      }
+    ]
+  }
+  , "estimatedResources":
+  {
+    "name":"Estimated Resource Usage"
+    , "columns":
+    ["Kernel Name", "ALUTs ", "FFs  ", "RAMs ", "DSPs ", "MLABs"]
+    , "children":
+    [
+      {
+        "name":"B_writer"
+        , "data":
+        [2139, 3883, 32, 0, 8]
+        , "debug":
+        [
+          [
+            {
+              "filename":""
+              , "line":0
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Adder"
+        , "data":
+        [1630, 1689, 3, 1, 6]
+        , "debug":
+        [
+          [
+            {
+              "filename":""
+              , "line":0
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"C_reader"
+        , "data":
+        [2059, 4007, 21, 0, 6]
+        , "debug":
+        [
+          [
+            {
+              "filename":""
+              , "line":0
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"A_writer"
+        , "data":
+        [2139, 3883, 32, 0, 8]
+        , "debug":
+        [
+          [
+            {
+              "filename":""
+              , "line":0
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Kernel Subtotal"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [7967, 13462, 88, 1, 28]
+      }
+      , {
+        "name":"Global Interconnect"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [13691, 19807, 78, 0, 0]
+      }
+      , {
+        "name":"Board Interface"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [466792, 928428, 3039, 1291, 0]
+      }
+      , {
+        "name":"System description ROM"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [2, 71, 2, 0, 0]
+      }
+      , {
+        "name":"Pipe resources"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [33, 306, 0, 0, 6]
+      }
+      , {
+        "name":"Total"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [488485, 962074, 3207, 1292, 34]
+        , "data_percent":
+        [26.1748, 25.7757, 27.3611, 22.4306]
+      }
+      , {
+        "name":"Available"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [1866240, 3732480, 11721, 5760, 0]
+      }
+    ]
+  }
+  , "compileWarnings":
+  {
+    "name":"Compile Warnings"
+    , "children":
+    [
+    ]
+  }
+}

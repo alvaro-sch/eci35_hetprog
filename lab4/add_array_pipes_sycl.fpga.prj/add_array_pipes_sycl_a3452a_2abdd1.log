@@ -1,0 +1,3 @@
+Compiler Command: aoc -o /tmp/add_array_pipes_sycl-a3452a-2abdd1.aocr /tmp/add_array_pipes_sycl-7ece4f-65d76f.spv -sycl -rtl -dep-files=/tmp/add_array_pipes_sycl-4e7a4f.d -output-report-folder=add_array_pipes_sycl.fpga.prj -g -hardware -board=intel_s10sx_pac:pac_s10
+System name: add_array_pipes_sycl_a3452a_2abdd1
+

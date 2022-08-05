@@ -1,0 +1,338 @@
+{
+  "bottlenecks":
+  [
+    {
+      "name":"Global variable"
+      , "id":96
+      , "src":"52"
+      , "dst":"55"
+      , "type":"fMAX/II"
+      , "brief":"Data dependency"
+      , "loop":"A_writer.B1"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"Global variable"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Data dependency"
+          , "Estimated fmax reduced to: ":"432.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"+(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                  , "line":"61"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"Global variable"
+          , "id":52
+          , "start":"4.00"
+          , "parent":"_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer.B1"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                , "line":61
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"+"
+          , "id":54
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                , "line":61
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":55
+          , "end":"4.00"
+          , "parent":"_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE_clES2_E8A_writer.B1"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                , "line":61
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":52
+          , "to":54
+        }
+        , {
+          "from":54
+          , "to":55
+        }
+        , {
+          "from":52
+          , "to":55
+          , "reverse":1
+        }
+      ]
+    }
+    , {
+      "name":"Global variable"
+      , "id":97
+      , "src":"62"
+      , "dst":"65"
+      , "type":"fMAX/II"
+      , "brief":"Data dependency"
+      , "loop":"B_writer.B1"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"Global variable"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Data dependency"
+          , "Estimated fmax reduced to: ":"432.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"+(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                  , "line":"71"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"Global variable"
+          , "id":62
+          , "start":"4.00"
+          , "parent":"_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer.B1"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                , "line":71
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"+"
+          , "id":64
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                , "line":71
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":65
+          , "end":"4.00"
+          , "parent":"_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE0_clES2_E8B_writer.B1"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                , "line":71
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":62
+          , "to":64
+        }
+        , {
+          "from":64
+          , "to":65
+        }
+        , {
+          "from":62
+          , "to":65
+          , "reverse":1
+        }
+      ]
+    }
+    , {
+      "name":"Global variable"
+      , "id":98
+      , "src":"75"
+      , "dst":"78"
+      , "type":"fMAX/II"
+      , "brief":"Data dependency"
+      , "loop":"C_reader.B1"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"Global variable"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Data dependency"
+          , "Estimated fmax reduced to: ":"432.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"+(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                  , "line":"92"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"Global variable"
+          , "id":75
+          , "start":"39.00"
+          , "parent":"_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader.B1"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                , "line":92
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"+"
+          , "id":77
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                , "line":92
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":78
+          , "end":"39.00"
+          , "parent":"_ZTSZZ4mainENKUlRN2cl4sycl7handlerEE2_clES2_E8C_reader.B1"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                , "line":92
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":75
+          , "to":77
+        }
+        , {
+          "from":77
+          , "to":78
+        }
+        , {
+          "from":75
+          , "to":78
+          , "reverse":1
+        }
+      ]
+    }
+  ]
+}

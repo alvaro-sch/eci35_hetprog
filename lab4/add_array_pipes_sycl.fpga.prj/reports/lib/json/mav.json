@@ -1,0 +1,944 @@
+{
+  "nodes":
+  [
+    {
+      "type":"kernel"
+      , "id":2
+      , "name":"Adder"
+      , "children":
+      [
+        {
+          "type":"bb"
+          , "id":3
+          , "name":"Adder.B0"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"17"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":4
+          , "name":"Adder.B1"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":6
+              , "name":"Pipe Read"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/ext/intel/pipes.hpp"
+                    , "line":62
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"32 bits"
+                  , "Depth":"16"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"35"
+                  , "Latency":"24"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Channels"
+                          , "link":"file:////media/libre/oneapi/compiler/2022.1.0/linux/lib/oclfpga/aoc_help_pages/qah1476410829821.html"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":8
+              , "name":"Pipe Read"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/ext/intel/pipes.hpp"
+                    , "line":62
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"32 bits"
+                  , "Depth":"16"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"35"
+                  , "Latency":"24"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Channels"
+                          , "link":"file:////media/libre/oneapi/compiler/2022.1.0/linux/lib/oclfpga/aoc_help_pages/qah1476410829821.html"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":10
+              , "name":"Pipe Write"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/ext/intel/pipes.hpp"
+                    , "line":75
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"32 bits"
+                  , "Depth":"16"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"95"
+                  , "Latency":"24"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Channels"
+                          , "link":"file:////media/libre/oneapi/compiler/2022.1.0/linux/lib/oclfpga/aoc_help_pages/qah1476410829821.html"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":12
+              , "name":"Loop Input"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                    , "line":81
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"13"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":13
+              , "name":"Loop End"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"119"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"119"
+              , "II":"1"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":""
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":5
+          , "name":"Adder.B2"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "type":"kernel"
+      , "id":14
+      , "name":"A_writer"
+      , "children":
+      [
+        {
+          "type":"bb"
+          , "id":15
+          , "name":"A_writer.B0"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"17"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":16
+          , "name":"A_writer.B1"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":18
+              , "name":"Load"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/ext/intel/pipes.hpp"
+                    , "line":75
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"32 bits"
+                  , "Type":"Burst-coalesced"
+                  , "Stall-free":"No"
+                  , "Loads from":"_arg_"
+                  , "Start Cycle":"36"
+                  , "Latency":"789"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"file:////media/libre/oneapi/compiler/2022.1.0/linux/lib/oclfpga/aoc_help_pages/yeo1491314105959.html"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":19
+              , "name":"Pipe Write"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/ext/intel/pipes.hpp"
+                    , "line":75
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"32 bits"
+                  , "Depth":"16"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"825"
+                  , "Latency":"24"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Channels"
+                          , "link":"file:////media/libre/oneapi/compiler/2022.1.0/linux/lib/oclfpga/aoc_help_pages/qah1476410829821.html"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":20
+              , "name":"Loop Input"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                    , "line":61
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"21"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":21
+              , "name":"Loop End"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"849"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"849"
+              , "II":"1"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":""
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":17
+          , "name":"A_writer.B2"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "type":"kernel"
+      , "id":23
+      , "name":"B_writer"
+      , "children":
+      [
+        {
+          "type":"bb"
+          , "id":24
+          , "name":"B_writer.B0"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"17"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":25
+          , "name":"B_writer.B1"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":27
+              , "name":"Load"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/ext/intel/pipes.hpp"
+                    , "line":75
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"32 bits"
+                  , "Type":"Burst-coalesced"
+                  , "Stall-free":"No"
+                  , "Loads from":"_arg_"
+                  , "Start Cycle":"36"
+                  , "Latency":"789"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"file:////media/libre/oneapi/compiler/2022.1.0/linux/lib/oclfpga/aoc_help_pages/yeo1491314105959.html"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":28
+              , "name":"Pipe Write"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/ext/intel/pipes.hpp"
+                    , "line":75
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"32 bits"
+                  , "Depth":"16"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"825"
+                  , "Latency":"24"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Channels"
+                          , "link":"file:////media/libre/oneapi/compiler/2022.1.0/linux/lib/oclfpga/aoc_help_pages/qah1476410829821.html"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":29
+              , "name":"Loop Input"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                    , "line":71
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"30"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":30
+              , "name":"Loop End"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"849"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"849"
+              , "II":"1"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":""
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":26
+          , "name":"B_writer.B2"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "type":"kernel"
+      , "id":31
+      , "name":"C_reader"
+      , "children":
+      [
+        {
+          "type":"bb"
+          , "id":32
+          , "name":"C_reader.B0"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"17"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":33
+          , "name":"C_reader.B1"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":35
+              , "name":"Pipe Read"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/media/libre/oneapi/compiler/2022.1.0/linux/bin-llvm/../include/sycl/ext/intel/pipes.hpp"
+                    , "line":62
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"32 bits"
+                  , "Depth":"16"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"47"
+                  , "Latency":"24"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Channels"
+                          , "link":"file:////media/libre/oneapi/compiler/2022.1.0/linux/lib/oclfpga/aoc_help_pages/qah1476410829821.html"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":36
+              , "name":"Store"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                    , "line":93
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"32 bits"
+                  , "Type":"Burst-coalesced"
+                  , "Stall-free":"No"
+                  , "Stores to":"_arg_"
+                  , "Start Cycle":"71"
+                  , "Latency":"64"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"file:////media/libre/oneapi/compiler/2022.1.0/linux/lib/oclfpga/aoc_help_pages/yeo1491314105959.html"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":37
+              , "name":"Loop Input"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+                    , "line":92
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"38"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":38
+              , "name":"Loop End"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"135"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"135"
+              , "II":"1"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":""
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":34
+          , "name":"C_reader.B2"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "type":"memtype"
+      , "id":1
+      , "name":"Global Memory"
+      , "children":
+      [
+        {
+          "type":"memsys"
+          , "id":22
+          , "name":"DDR"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Number of banks":"4"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "type":"pipe"
+      , "id":7
+      , "name":"cl::sycl::ext::intel::pipe<a_read_pipe, float, 16>"
+      , "debug":
+      [
+        [
+          {
+            "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+            , "line":80
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Width":"32 bits"
+          , "Depth":"16"
+        }
+      ]
+    }
+    , {
+      "type":"pipe"
+      , "id":9
+      , "name":"cl::sycl::ext::intel::pipe<b_read_pipe, float, 16>"
+      , "debug":
+      [
+        [
+          {
+            "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+            , "line":80
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Width":"32 bits"
+          , "Depth":"16"
+        }
+      ]
+    }
+    , {
+      "type":"pipe"
+      , "id":11
+      , "name":"cl::sycl::ext::intel::pipe<c_write_pipe, float, 16>"
+      , "debug":
+      [
+        [
+          {
+            "filename":"/home/clinux01/eci-t3/lab4/add_array_pipes_sycl.cc"
+            , "line":80
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Width":"32 bits"
+          , "Depth":"16"
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+    {
+      "from":7
+      , "to":6
+    }
+    , {
+      "from":9
+      , "to":8
+    }
+    , {
+      "from":10
+      , "to":11
+    }
+    , {
+      "from":3
+      , "to":12
+    }
+    , {
+      "from":6
+      , "to":13
+    }
+    , {
+      "from":8
+      , "to":13
+    }
+    , {
+      "from":10
+      , "to":13
+    }
+    , {
+      "from":13
+      , "to":5
+    }
+    , {
+      "from":12
+      , "to":6
+    }
+    , {
+      "from":12
+      , "to":8
+    }
+    , {
+      "from":6
+      , "to":10
+    }
+    , {
+      "from":8
+      , "to":10
+    }
+    , {
+      "from":19
+      , "to":7
+    }
+    , {
+      "from":15
+      , "to":20
+    }
+    , {
+      "from":18
+      , "to":21
+    }
+    , {
+      "from":19
+      , "to":21
+    }
+    , {
+      "from":21
+      , "to":17
+    }
+    , {
+      "from":20
+      , "to":18
+    }
+    , {
+      "from":18
+      , "to":19
+    }
+    , {
+      "from":22
+      , "to":18
+    }
+    , {
+      "from":28
+      , "to":9
+    }
+    , {
+      "from":24
+      , "to":29
+    }
+    , {
+      "from":27
+      , "to":30
+    }
+    , {
+      "from":28
+      , "to":30
+    }
+    , {
+      "from":30
+      , "to":26
+    }
+    , {
+      "from":29
+      , "to":27
+    }
+    , {
+      "from":27
+      , "to":28
+    }
+    , {
+      "from":22
+      , "to":27
+    }
+    , {
+      "from":11
+      , "to":35
+    }
+    , {
+      "from":32
+      , "to":37
+    }
+    , {
+      "from":35
+      , "to":38
+    }
+    , {
+      "from":36
+      , "to":38
+    }
+    , {
+      "from":38
+      , "to":34
+    }
+    , {
+      "from":37
+      , "to":35
+    }
+    , {
+      "from":35
+      , "to":36
+    }
+    , {
+      "from":36
+      , "to":22
+    }
+  ]
+}

@@ -3,32 +3,30 @@
 #include <vector>
 
 #include <CL/sycl.hpp>
-// Header locations and some DPC++ extensions changed between beta09 and beta10
-// Temporarily modify the code sample to accept either version
-#define BETA09 20200827
-#if __SYCL_COMPILER_VERSION <= BETA09
-    #include <CL/sycl/intel/fpga_extensions.hpp>
-    namespace INTEL = sycl::intel;  // Namespace alias for backward compatibility
-#else
-    #include <CL/sycl/INTEL/fpga_extensions.hpp>
-#endif
+#include <ext/intel/fpga_extensions.hpp>
 
-using namespace sycl;
+namespace intel = sycl::ext::intel;
 
 const size_t pipe_entries = 16; // ensure 512 bit burst
-using a_pipe = pipe<                 // Defined in the SYCL headers. also ext::intel::pipe
-    class a_read_pipe,   // An identifier for the pipe.
-    float,                            // The type of data in the pipe.
+using a_pipe = intel::pipe<
+    class a_read_pipe,
+    float,
     pipe_entries>;
 
-// please complete
+using b_pipe = intel::pipe<
+    class b_read_pipe,
+    float,
+    pipe_entries>;
 
-int main() {
+using c_pipe = intel::pipe<
+    class c_write_pipe,
+    float,
+    pipe_entries>;
 
+auto main() -> int {
     const size_t n = 32;
 
     std::vector<float> A, B, C(n);
-
     A.reserve(n);
     B.reserve(n);
 
@@ -46,15 +44,53 @@ int main() {
     }
 
 #if defined(FPGA_EMULATOR)
-    INTEL::fpga_emulator_selector device_selector;
+    intel::fpga_emulator_selector device_selector;
 #else
-    INTEL::fpga_selector device_selector;
+    intel::fpga_selector device_selector;
 #endif
 
     // property list to enable SYCL profiling for the device queue
     // auto props = property_list{property::queue::enable_profiling()};
+    sycl::queue q {intel::fpga_emulator_selector {}};
+    sycl::buffer<float> A_b {A}, B_b {B}, C_b {C};
 
-    // please complete
+    q.submit([&](sycl::handler &h) {
+        auto A_a = A_b.get_access(h, sycl::read_only);
+
+        h.single_task<class A_writer>([=]() {
+            for (size_t i = 0; i < n; ++i) {
+                a_pipe::write(A_a[i]);
+            }
+        });
+    });
+
+    q.submit([&](sycl::handler &h) {
+        auto B_a = B_b.get_access(h, sycl::read_only);
+
+        h.single_task<class B_writer>([=]() {
+            for (size_t i = 0; i < n; ++i) {
+                b_pipe::write(B_a[i]);
+            }
+        });
+    });
+
+    q.submit([&](sycl::handler &h) {
+        h.single_task<class Adder>([=]() {
+            for (size_t i = 0; i < n; ++i) {
+                c_pipe::write(a_pipe::read() + b_pipe::read());
+            }
+        });
+    });
+
+    q.submit([&](sycl::handler &h) {
+        auto C_a = C_b.get_access(h, sycl::write_only);
+
+        h.single_task<class C_reader>([=]() {
+            for (size_t i = 0; i < n; ++i) {
+                C_a[i] = c_pipe::read();
+            }
+        });
+    });
 
     for (int i = 0; i < 8; i++) {
       std::cout << "C[" << i << "] = " << C[i] << std::endl;

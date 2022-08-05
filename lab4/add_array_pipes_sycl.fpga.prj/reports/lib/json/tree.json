@@ -1,0 +1,142 @@
+{
+  "nodes":
+  [
+    {
+      "name":"Adder"
+      , "id":1
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"Adder.B0"
+          , "id":5
+          , "type":"bb"
+        }
+        , {
+          "name":"Adder.B1"
+          , "id":6
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 0"
+              , "id":18
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 1"
+              , "id":21
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"Adder.B2"
+          , "id":7
+          , "type":"bb"
+        }
+      ]
+    }
+    , {
+      "name":"A_writer"
+      , "id":2
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"A_writer.B0"
+          , "id":8
+          , "type":"bb"
+        }
+        , {
+          "name":"A_writer.B1"
+          , "id":9
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 2"
+              , "id":25
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"A_writer.B2"
+          , "id":10
+          , "type":"bb"
+        }
+      ]
+    }
+    , {
+      "name":"B_writer"
+      , "id":3
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"B_writer.B0"
+          , "id":11
+          , "type":"bb"
+        }
+        , {
+          "name":"B_writer.B1"
+          , "id":12
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 3"
+              , "id":30
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"B_writer.B2"
+          , "id":13
+          , "type":"bb"
+        }
+      ]
+    }
+    , {
+      "name":"C_reader"
+      , "id":4
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"C_reader.B0"
+          , "id":14
+          , "type":"bb"
+        }
+        , {
+          "name":"C_reader.B1"
+          , "id":15
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 4"
+              , "id":35
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 5"
+              , "id":37
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"C_reader.B2"
+          , "id":16
+          , "type":"bb"
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+  ]
+}
